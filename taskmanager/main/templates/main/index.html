@@ -11,6 +11,9 @@
             <div class="alert alert-warning mt-2">
                 <h3>{{ element.title }}</h3>
                 <p>{{ element.task }}</p>
+                <p>{{ element.date }}</p>
+                <a class="btn btn-primary" href="{% url 'delete' t_id=element.id %}" role="button">Удалить</a>
+                <a class="btn btn-primary" href="{% url 'update' t_id=element.id %}" role="button">Редактировать</a>
             </div>
         {%endfor %}
     {% else %}
